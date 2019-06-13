@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@android:color/white"
+    android:elevation="10dp">
+
+
+    <TextView
+        android:id="@+id/titleToDo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:text="Срочно сделать!"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/descriptionToDo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleToDo"
+        android:layout_marginStart="8dp"
+        android:text="Пойди туда сделай то-тоПойди туда сделай то-тоПойди туда сделай то-тоПойди туда сделай то-тоПойди туда сделай то-тоПойди туда сделай то-тоПойди туда сделай то-тоПойди туда сделай то-то"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/fromToDo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/todoDivider"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:text="От: "
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/senderNameToDo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/todoDivider"
+        android:layout_toEndOf="@+id/fromToDo"
+        android:text="Васи Пупкина"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+    <ImageButton
+        android:id="@+id/checkToDoButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/descriptionToDo"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="TODO"
+        app:srcCompat="@drawable/ic_check_black_24dp" />
+
+    <View
+        android:id="@+id/todoDivider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/checkToDoButton"
+        android:layout_marginTop="2dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/todoID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/todoDivider"
+        android:layout_toEndOf="@+id/senderNameToDo"
+        android:visibility="gone"
+        android:text="ToDoID"
+        android:textSize="10sp"/>
+
+</RelativeLayout>

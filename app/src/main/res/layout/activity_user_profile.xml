@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserProfileActivity"
+    android:theme="@android:style/Theme.NoTitleBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backgroundProfileImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/userProfileToolbar"
+            android:layout_alignBottom="@+id/userProfileImageView"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="-25dp"
+            android:background="?attr/colorPrimary"
+            android:gravity="center"
+            android:textSize="14sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userProfileImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/userProfileToolbar"
+            android:layout_margin="25dp"
+            app:srcCompat="@drawable/ic_account_circle_black_36dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/nameProfileTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/userProfileImageView"
+            android:layout_alignBottom="@+id/userProfileImageView"
+            android:layout_toEndOf="@+id/userProfileImageView"
+            android:gravity="center"
+            android:text="username"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/userProfileToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/backProfileButton"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/empty24dp"
+                    android:onClick="clickBackProfileButton"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:text="Информация"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/employeeProfileTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:text="РАБОТЯГА" />
+
+    <TextView
+        android:id="@+id/employeeProfileTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-7dp"
+        android:text="     Должность" />
+
+    <TextView
+        android:id="@+id/phoneNumberProfileTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="+37529*******"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/phoneNumberProfileTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-7dp"
+        android:text="     Телефон" />
+
+    <TextView
+        android:id="@+id/mailProfileTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="tmp.mail@gmail.com"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/mailProfileTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-7dp"
+        android:text="     Электронная почта" />
+
+
+</LinearLayout>

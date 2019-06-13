@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_group_black_24dp"
+            android:title="Пользователи" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_event_black_24dp"
+            android:title="Список задач" />
+
+        <item
+            android:id="@+id/nav_employee"
+            android:icon="@drawable/ic_event_black_24dp"
+            android:title="Редактор должностей"
+            android:visible="false" />
+    </group>
+
+    <item android:title='Системное'>
+        <menu>
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_exit_to_app_black_24dp"
+                android:title="Выход" />
+        </menu>
+    </item>
+
+</menu>

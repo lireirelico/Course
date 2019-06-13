@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/messageLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/messengerImageView"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/messengerImageView"
+            android:background="@drawable/layout_bg_m"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:id="@+id/messageImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/messageTextView"
+                android:layout_marginStart="10dp"
+                android:adjustViewBounds="true"
+                android:background="@color/colorPrimary"
+                android:contentDescription="TODO"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/messageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="э"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#E9E9E9" />
+
+            <TextView
+                android:id="@+id/timeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/messageImageView"
+                android:layout_alignStart="@+id/messageImageView"
+                android:layout_marginStart="0dp"
+                android:hint="11-12-2007 23:12:01"
+                android:textColor="#C7C7C7"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/myMessageLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/messageLinearLayout"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="5dp">
+
+        <RelativeLayout
+            android:id="@+id/mRL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toStartOf="@+id/myMessengerImageView"
+            android:background="@drawable/layout_bg"
+            android:gravity="right"
+            android:paddingStart="5dp"
+            android:paddingEnd="10dp">
+
+            <ImageView
+                android:id="@+id/myMessageImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myMessageTextView"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:background="@color/colorPrimary"
+                android:contentDescription="TODO"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/myMessageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="э"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#E9E9E9" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myMessageImageView"
+                android:gravity="right|end">
+
+                <TextView
+                    android:id="@+id/myTimeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="время"
+                    android:singleLine="true"
+                    android:text="11-12-2007 23:12:01"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#C7C7C7"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/myMessengerImageView"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

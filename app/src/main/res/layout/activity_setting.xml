@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity">
+
+    <ImageView
+        android:id="@+id/backgroundSetting"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@+id/settingToolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="?attr/colorPrimary" />
+
+    <EditText
+        android:id="@+id/usernameSettingEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userSettingImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Имя пользователя"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/mailSettingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usernameSettingEditText"
+        android:padding="10dp"
+        android:text="Электронная почта:"
+        android:textSize="14sp"
+        tools:text="Электронная почта:" />
+
+    <TextView
+        android:id="@+id/phoneSettingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mailSettingTextView"
+        android:padding="10dp"
+        android:text="Телефон:"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/mailSetiingEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usernameSettingEditText"
+        android:layout_toRightOf="@+id/mailSettingTextView"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:text="отсутствует"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/phoneSetiingEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mailSettingTextView"
+        android:layout_toRightOf="@+id/phoneSettingTextView"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:text="отсутствует"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/uploadPhotoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/userSettingImageView"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toRightOf="@+id/userSettingImageView"
+        android:background="?attr/colorPrimary"
+        android:onClick="uploadPhoto"
+        android:text="Загрузить фотографию" />
+
+    <Button
+        android:id="@+id/choosePhoteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/uploadPhotoButton"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@+id/userSettingImageView"
+        android:background="?attr/colorPrimary"
+        android:onClick="choosePhoteButton"
+        android:text="Выбрать фотографию" />
+
+    <ProgressBar
+        android:id="@+id/uploadPhotoProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userSettingImageView"
+        tools:visibility="invisible" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userSettingImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/settingToolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/ic_account_circle_black_36dp"
+        tools:srcCompat="@drawable/ic_account_circle_black_36dp" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/settingToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/backSettingButton"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/empty24dp"
+                android:contentDescription="TODO"
+                android:onClick="clickBackSettingButton"
+                app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
+            <TextView
+                android:id="@+id/settingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/backSettingButton"
+                android:paddingLeft="10dp"
+                android:text="Настройки" />
+
+            <ImageButton
+                android:id="@+id/saveButton"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/empty24dp"
+                android:onClick="saveButton"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_save_black_24dp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+</RelativeLayout>
